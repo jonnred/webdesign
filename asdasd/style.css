@@ -1,0 +1,126 @@
+:root{
+--color1:white;
+
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color:wheat
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url("clift.jpg");
+    background-size: cover;
+    height: 200vh;
+    background-position-y: top;
+    overflow-x: hidden;
+
+}
+.content1 h1{
+    display: block;
+    position: relative;
+    text-align: left;
+    color: silver;
+}
+.navContainer{
+    display:flex;
+    text-decoration: none;
+    justify-content: space-around;
+    list-style: none;
+    margin: 10px 0px 20px 40px;
+}
+.contentContainer{
+    display:flex;
+}
+.content1 , .content2{
+    display: block;
+    min-width: 500px;
+    max-width: 600px;
+}
+.content1{
+    flex-grow: 1;    
+    margin: 15% 50px 20% 10%;
+
+}
+.content1 h1{
+    letter-spacing: 1px;
+    margin-bottom:20px;
+}
+.content2{
+    flex-grow: 1;
+}
+.navContainer li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.currentPage{
+    color: orangered;
+}
+.navContainer li a:hover{
+    color:orangered;
+    transition: 2s;
+
+    border-bottom: 0.2px solid orangered;
+}
+.button{
+    margin-top: 30px;
+    position: relative;
+    border: 2px solid black;
+    width: 120px;
+    padding: 15px;
+    color:orangered;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.burgerContainer {
+    width: 20px;
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    transform: rotate(90deg);
+    cursor: pointer;
+    display:none;
+}
+.line1{
+    background-color:var(--color1);
+    width: 2px;
+}
+.line2{
+    background-color:var(--color1);
+    width: 2px;
+}
+.line3{
+    background-color:var(--color1);
+    width: 2px;
+}
+
+@media screen and (max-width:800px) {
+    .contentContainer{
+        flex-wrap: wrap;
+    }
+    .content1{  
+        min-width: 400px;
+    }
+    .navContainer li:not(:first-child){
+        display: none;
+    }
+    .navContainer li:first-child{
+        text-align: left;
+        flex-grow: 1;
+        margin-left: 35px;
+    }
+    
+    .navContainer {
+        justify-content: start;
+        
+    }
+    .burgerContainer{
+        margin-right: 1.2rem;
+        flex-direction: row-reverse;
+        display: flex;
+    }
+    .burgerContainer:hover{
+        background-color: rgba(179, 149, 52, 0.308);
+    }
+}
